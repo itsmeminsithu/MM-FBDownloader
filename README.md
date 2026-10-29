@@ -1,19 +1,32 @@
-<div align="center">
-</div>
+# MM FBDownloader
 
-# Run and deploy your app
+A small React + Vite web app for downloading Facebook videos. Paste a video link, get the video details back, pick HD or SD.
 
-This contains everything you need to run your app locally.
+The UI is kept simple and mobile-first, using the red, green and yellow of the Myanmar flag.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1XBszpj0FsthVEPZP_LJ92oHZc-jUnzxH
+## Status
 
-## Run Locally
+This does not build right now, and I am not going to pretend it does.
 
-**Prerequisites:**  Node.js
+`App.tsx` imports files that are not in this repo:
 
+- `components/Navbar`, `components/Hero`, `components/VideoResult`
+- `components/Features`, `components/Footer`
+- `services/mockFbApi`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Until those are restored, `npm run build` fails with "Could not resolve ./components/Navbar". What is here is the app shell: `App.tsx`, `index.tsx`, `types.ts`, Vite and TypeScript config.
+
+## Run it (once the missing files are back)
+
+```
+npm install
+npm run dev
+```
+
+## Stack
+
+React 19, TypeScript, Vite 6, lucide-react.
+
+## Licence
+
+MIT — see `LICENSE`. Copyright (c) 2025 Min SiThu.
